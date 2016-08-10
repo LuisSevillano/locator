@@ -167,7 +167,8 @@
           </div>
         {{/()}}
 
-        <!--
+        <!-- comment this few lines to avoid map width manipulations
+        
         {{#(_.size(options.widths) > 1)}}
           <div class="config-option config-select">
             <label>Map width</label>
