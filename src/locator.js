@@ -14,7 +14,7 @@
       template: "REPLACE-DEFAULT-TEMPLATE",
 
       // Text
-      title: "Locator",
+      title: "Localizador",
       footer: "Made by the <a href=\"//datanews.tumblr.com/\" target=\"_blank\">WNYC DataNews</a> team.  Locator only works in <a href=\"//google.com/chrome\" target=\"_blank\">Chrome</a> at the moment.  See how to <a href=\"//github.com/datanews/locator/\" target=\"_blank\">deploy Locator</a> for yourself or your organization.",
 
       // Main map
@@ -43,15 +43,15 @@
         // Example of just url
         //"Stamen Toner": "http://tile.stamen.com/toner/{z}/{x}/{y}.png"
       },
-      tileset: "CartoDB Positron",
-      zoom: 17,
+      tileset: "Mapbox Run, Bike, Hike (via WNYC)",
+      zoom: 15,
       minZoom: 1,
       maxZoom: 18,
-      lat: 40.74844,
-      lng: -73.98566,
+      lat: 40.4111255,
+      lng: -3.7092157,
 
       // Attribution (or source) that goes on top of map
-      embedAttribution: false,
+      embedAttribution: true,
       overrideAttribution: undefined,
 
       // Mini map
@@ -77,9 +77,9 @@
 
       // Markers
       markers: [{
-        text: "Empire State Building",
-        lat: 40.74844,
-        lng: -73.98566
+        text: "Puerta del Sol",
+        lat: 40.4169514,
+        lng: -3.7057225
       }],
 
       // Marker defaults
@@ -88,7 +88,7 @@
         background: "rgba(0, 0, 0, 0.9)",
         foreground: "rgba(255, 255, 255, 0.9)",
         radius: 5,
-        fontSize: 16,
+        fontSize: 33,
         font: "\"Open Sans\", Helvetica, Arial, sans-serif",
         labelDistance: 20,
         labelWidth: 3,
@@ -126,7 +126,7 @@
       drawingStyles: {
         fill: false,
         stroke: true,
-        color: "#00B8F5",
+        color: "#F5003D",
         opacity: 0.9,
         weight: 5,
         fillOpacity: 0.3
@@ -155,9 +155,10 @@
       widths: {
         Small: 400,
         Medium: 600,
-        Large: 800,
+        Large: 1706,
       },
-      width: "Medium",
+      //width: "Medium",
+      width: "Large",
       ratios: {
         "1:1": 1 / 1,
         "4:3": 4 / 3,

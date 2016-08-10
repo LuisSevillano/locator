@@ -61,17 +61,17 @@
 
         {{#options.geocoder}}
           <div class="config-option">
-            <label>Search location by address</label>
-            <input type="text" placeholder="Address or place" value="{{ geocodeInput }}" lazy disabled="{{ isGeocoding }}">
+            <label>Busca un lugar introduciendo su dirección</label>
+            <input type="text" placeholder="Dirección o lugar" value="{{ geocodeInput }}" lazy disabled="{{ isGeocoding }}">
           </div>
         {{/options.geocoder}}
 
         <div class="markers {{^options.markers}}no-markers{{/}}">
-          <label class="no-markers-label">Markers</label>
+          <label class="no-markers-label">Marcadores</label>
           <button class="add-marker action small inline" on-tap="add-marker" title="Add marker at center of map"><i class="fa fa-plus"></i></button>
 
-          <label class="markers-label">Markers.</label>
-          <div class="help">Use <code>&lt;br&gt;</code> to make line breaks.</div>
+          <label class="markers-label">Marcadores.</label>
+          <div class="help">Utiliza <code>&lt;br&gt;</code> para hacer saltos de línea.</div>
 
           {{#options.markers:mi}}
             <div class="marker" intro-outro="slide">
@@ -116,13 +116,13 @@
 
         {{#options.drawing}}
           <div class="drawing">
-            <label class="markers-label">Drawing</label>
-            <div class="help">Use the buttons on the map to draw shapes.</div>
+            <label class="markers-label">Dibuja</label>
+            <div class="help">utiliza los botones del mapa para dibujar capas, polígonos, etc.</div>
 
             <div class="drawing-section">
               <div class="drawing-option">
                 <input type="checkbox" checked="{{ options.drawingStyles.stroke }}" id="drawing-styles-stroke" lazy>
-                <label for="drawing-styles-stroke">Stroke</label>
+                <label for="drawing-styles-stroke">Contorno</label>
               </div>
 
               {{#(_.size(options.drawingStrokes) > 1 && options.drawingStyles.stroke)}}
@@ -139,7 +139,7 @@
             <div class="drawing-section">
               <div class="drawing-option">
                 <input type="checkbox" checked="{{ options.drawingStyles.fill }}" id="drawing-styles-fill" lazy>
-                <label for="drawing-styles-fill">Fill</label>
+                <label for="drawing-styles-fill">Relleno</label>
               </div>
 
               {{#(_.size(options.drawingStrokes) > 1 && options.drawingStyles.fill)}}
@@ -157,7 +157,7 @@
 
         {{#(_.size(options.tilesets) > 1)}}
           <div class="config-option">
-            <label>Background map set</label>
+            <label>Tipo de mapa</label>
 
             <div class="image-picker images-{{ _.size(options.tilesets) }}">
               {{#options.tilesets:i}}
@@ -167,6 +167,7 @@
           </div>
         {{/()}}
 
+        <!--
         {{#(_.size(options.widths) > 1)}}
           <div class="config-option config-select">
             <label>Map width</label>
@@ -178,10 +179,11 @@
             </select>
           </div>
         {{/()}}
+    -->
 
         {{#(_.size(options.ratios) > 1)}}
           <div class="config-option config-select">
-            <label>Map aspect ratio</label>
+            <label>Ratio del mapa</label>
 
             <select value="{{ options.ratio }}">
               {{#options.ratios:i}}
@@ -192,7 +194,7 @@
         {{/()}}
 
         <div class="config-option">
-          <label>Mini-map zoom</label>
+          <label>Zoom del mini-mapa</label>
 
           <input type="range" min="-10" max="1" value="{{ options.miniZoomOffset }}" title="Adjust zoom level for map">
         </div>
@@ -201,11 +203,11 @@
           <input type="checkbox" checked="{{ options.embedAttribution }}" id="config-embed-attribution" lazy>
           <label for="config-embed-attribution">Embed attribution</label>
 
-          <input type="text" placeholder="Override attribution" value="{{ options.overrideAttribution }}" lazy>
+          <input type="text" placeholder="Sobreescribir atribución" value="{{ options.overrideAttribution }}" lazy>
         </div>
 
         <div class="config-action">
-          <button class="large additive generate-image" on-tap="generate">Generate <i class="fa fa-download"></i></button>
+          <button class="large additive generate-image" on-tap="generate">Generar imagen del mapa <i class="fa fa-download"></i></button>
         </div>
 
         <div class="preview">
