@@ -37,7 +37,7 @@
     <div class="minor-controls">
       <div class="toggle-controls" on-tap="toggle:'noGenerate.controlsOpen'"></div>
 
-      <button class="minor-button minor-generate" on-tap="generate" title="Generate"><i class="fa fa-download"></i></button>
+      <button class="minor-button minor-generate" on-tap="generate" title="Generar"><i class="fa fa-download"></i></button>
     </div>
 
     <div class="locator-controls-wrapper">
@@ -47,7 +47,7 @@
         <div class="locator-history">
           <button class="small inline action undo" disabled="{{ !canUndo }}" title="Undo" on-tap="undo"><i class="fa fa-rotate-left"></i></button>
           <button class="small inline action redo" disabled="{{ !canRedo }}" title="Redo" on-tap="redo"><i class="fa fa-rotate-right"></i></button>
-          <button class="small inline destructive reset" title="Reset all options" on-tap="resetOptions"><i class="fa fa-refresh"></i></button>
+          <button class="small inline destructive reset" title="Eliminar todas las opciones" on-tap="resetOptions"><i class="fa fa-refresh"></i></button>
         </div>
 
         {{^options.geocoder}}
@@ -68,7 +68,7 @@
 
         <div class="markers {{^options.markers}}no-markers{{/}}">
           <label class="no-markers-label">Marcadores</label>
-          <button class="add-marker action small inline" on-tap="add-marker" title="Add marker at center of map"><i class="fa fa-plus"></i></button>
+          <button class="add-marker action small inline" on-tap="add-marker" title="Añadir marcador al centro del mapa"><i class="fa fa-plus"></i></button>
 
           <label class="markers-label">Marcadores.</label>
           <div class="help">Utiliza <code>&lt;br&gt;</code> para hacer saltos de línea.</div>
@@ -76,20 +76,20 @@
           {{#options.markers:mi}}
             <div class="marker" intro-outro="slide">
               <div class="config-option">
-                <input type="text" placeholder="Marker label" value="{{ this.text }}" lazy>
+                <input type="text" placeholder="título del marcador" value="{{ this.text }}" lazy>
               </div>
 
               <div class="marker-actions">
                 {{#options.markerToCenter}}
-                  <button class="action small" on-tap="marker-to-center:{{ mi }}" title="Move marker to center of map"><i class="fa fa-compass"></i></button>
+                  <button class="action small" on-tap="marker-to-center:{{ mi }}" title="Mover el marcador al centro del mapa"><i class="fa fa-compass"></i></button>
                 {{/}}
 
                 {{#options.centerToMarker}}
-                  <button class="action small" on-tap="center-to-marker:{{ mi }}" title="Center map on marker"><i class="fa fa-plus-square-o"></i></button>
+                  <button class="action small" on-tap="center-to-marker:{{ mi }}" title="Centrar el mapa al marcador"><i class="fa fa-plus-square-o"></i></button>
                 {{/}}
 
                 {{#(_.size(options.markerBackgrounds) > 1)}}
-                  <div class="color-picker" title="Set marker background color">
+                  <div class="color-picker" title="Establecer el color de fondo del marcador">
                     {{#options.markerBackgrounds:bi}}
                       <div class="color-picker-item {{#(options.markers[mi] && options.markers[mi].background === this)}}active{{ else }}inactive{{/()}} {{#(this.indexOf('255, 255, 255') !== -1 || this.indexOf('FFFFFF') !== -1)}}is-white{{/()}}"
                         style="background-color: {{ this }}"
@@ -99,7 +99,7 @@
                 {{/}}
 
                 {{#(_.size(options.markerForegrounds) > 1)}}
-                  <div class="color-picker" title="Set marker foreground color">
+                  <div class="color-picker" title="Establecer el color del texto del marcador">
                     {{#options.markerForegrounds:bi}}
                       <div class="color-picker-item {{#(options.markers[mi] && options.markers[mi].foreground === this)}}active{{ else }}inactive{{/()}} {{#(this.indexOf('255, 255, 255') !== -1 || this.indexOf('FFFFFF') !== -1)}}is-white{{/()}}"
                         style="background-color: {{ this }}"
@@ -108,7 +108,7 @@
                   </div>
                 {{/}}
 
-                <button class="destructive small" on-tap="remove-marker:{{ mi }}" title="Remove marker"><i class="fa fa-close"></i></button>
+                <button class="destructive small" on-tap="remove-marker:{{ mi }}" title="Eliminar marcador"><i class="fa fa-close"></i></button>
               </div>
             </div>
           {{/}}
@@ -126,7 +126,7 @@
               </div>
 
               {{#(_.size(options.drawingStrokes) > 1 && options.drawingStyles.stroke)}}
-                <div class="color-picker" title="Set drawing stroke color">
+                <div class="color-picker" title="Color del borde del dibujo">
                   {{#options.drawingStrokes:di}}
                     <div class="color-picker-item {{#(options.drawingStyles.color === this)}}active{{ else }}inactive{{/()}} {{#(this.indexOf('255, 255, 255') !== -1 || this.indexOf('FFFFFF') !== -1)}}is-white{{/()}}"
                       style="background-color: {{ this }}"
@@ -143,7 +143,7 @@
               </div>
 
               {{#(_.size(options.drawingStrokes) > 1 && options.drawingStyles.fill)}}
-                <div class="color-picker" title="Set drawing fill color">
+                <div class="color-picker" title="Color del relleno del dibujo">
                   {{#options.drawingFills:di}}
                     <div class="color-picker-item {{#(options.drawingStyles.fillColor === this)}}active{{ else }}inactive{{/()}} {{#(this.indexOf('255, 255, 255') !== -1 || this.indexOf('FFFFFF') !== -1)}}is-white{{/()}}"
                       style="background-color: {{ this }}"
@@ -168,7 +168,7 @@
         {{/()}}
 
         <!-- comment this few lines to avoid map width manipulations
-        
+
         {{#(_.size(options.widths) > 1)}}
           <div class="config-option config-select">
             <label>Map width</label>
@@ -197,7 +197,7 @@
         <div class="config-option">
           <label>Zoom del mini-mapa</label>
 
-          <input type="range" min="-10" max="1" value="{{ options.miniZoomOffset }}" title="Adjust zoom level for map">
+          <input type="range" min="-10" max="1" value="{{ options.miniZoomOffset }}" title="Ajustar el nivel de zoom">
         </div>
 
         <div class="config-option">
