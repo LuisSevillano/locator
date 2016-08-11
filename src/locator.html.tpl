@@ -91,6 +91,7 @@
                 {{#(_.size(options.markerBackgrounds) > 1)}}
                   <div class="color-picker" title="Establecer el color de fondo del marcador">
                     {{#options.markerBackgrounds:bi}}
+                      <!-- <div class="color-picker-item {{#(options.markers[mi] && options.markers[mi].background === this)}}active{{ else }}inactive{{/()}} {{#(this.indexOf('255, 255, 255') !== -1 || this.indexOf('FFFFFF') !== -1)}}is-white{{/()}}" -->
                       <div class="color-picker-item {{#(options.markers[mi] && options.markers[mi].background === this)}}active{{ else }}inactive{{/()}} {{#(this.indexOf('255, 255, 255') !== -1 || this.indexOf('FFFFFF') !== -1)}}is-white{{/()}}"
                         style="background-color: {{ this }}"
                         on-tap="setMarker:{{ mi }},'background',{{ this }}">
