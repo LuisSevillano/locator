@@ -245,14 +245,16 @@
   font-size: 0.85em;
   color: #878787;
   display: block;
+  font-weight: 700;
 }
 .locator .locator-controls .help {
-  font-size: 0.65em;
+  font-size: 0.75em;
   color: #878787;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.8em;
 }
 .locator .locator-controls .config-option label {
   padding-left: 1.15em;
+  padding-bottom: 0.5em;
 }
 .locator .locator-controls input,
 .locator .locator-controls select,
