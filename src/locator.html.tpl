@@ -50,14 +50,7 @@
           <button class="small inline destructive reset" title="Eliminar todas las opciones" on-tap="resetOptions"><i class="fa fa-refresh"></i></button>
         </div>
 
-        {{^options.geocoder}}
-          <div class="config-option">
-            <label>Latitude and longitude location</label>
 
-            <br><input type="number" placeholder="Latitude" value="{{ options.lat }}" lazy>
-            <br><input type="number" placeholder="Longitude" value="{{ options.lng }}" lazy>
-          </div>
-        {{/options.geocoder}}
 
         {{#options.geocoder}}
           <div class="config-option">
@@ -65,6 +58,15 @@
             <input type="text" placeholder="Dirección o lugar" value="{{ geocodeInput }}" lazy disabled="{{ isGeocoding }}">
           </div>
         {{/options.geocoder}}
+
+        <!-- {{^options.geocoder}} -->
+          <div class="config-option">
+            <label>Latitude and longitude location</label>
+
+            <br><input class="coordinates" type="number" placeholder="Latitude" value="{{ options.lat }}" lazy>
+            <br><input class="coordinates" type="number" placeholder="Longitude" value="{{ options.lng }}" lazy>
+          </div>
+          <!-- {{/options.geocoder}} -->
 
         <div class="markers {{^options.markers}}no-markers{{/}}">
           <label class="no-markers-label">Marcadores</label>

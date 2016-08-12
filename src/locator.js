@@ -89,7 +89,8 @@
         foreground: "rgba(255, 255, 255, 0.9)",
         radius: 5,
         fontSize: 33,
-        font: "\"Open Sans\", Helvetica, Arial, sans-serif",
+        font: "\"Roboto\", Helvetica Neue, Helvetica, Arial, sans-serif",
+
         labelDistance: 20,
         labelWidth: 3,
         padding: 10
@@ -808,7 +809,6 @@ _.extend(Locator.prototype, {
         this.drawMarker(m, canvas, tilePoint, zoom);
       }, this));
     },
-
     // Marker layer draw handler
     drawMarker: function(marker, canvas, tilePoint, zoom) {
       var ctx = canvas.getContext("2d");

@@ -1,15 +1,15 @@
 /**
- * locator - In browser locator map generator
- * @version v0.0.1
- * @link https://github.com/datanews/locator#readme
- * @license MIT
- * @notes External libraries may be bundled here and their respective, original license applies.
- */
+* locator - In browser locator map generator
+* @version v0.0.1
+* @link https://github.com/datanews/locator#readme
+* @license MIT
+* @notes External libraries may be bundled here and their respective, original license applies.
+*/
 /**
- * Main CSS for Locator.
- */
+* Main CSS for Locator.
+*/
 .locator {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   position: absolute;
   top: 0;
@@ -60,12 +60,12 @@
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .locator .overflowed-y .locator-map-wrapper {
   top: 0;
   -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
 .locator .locator-display-inner {
   padding: 1em;
@@ -149,7 +149,7 @@
   margin-left: 0.25em;
   color: #878787;
   -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  transform: rotate(-90deg);
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
@@ -184,7 +184,7 @@
 }
 .locator.controls-closed .toggle-controls:after {
   -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 .locator.controls-closed .locator-controls {
   right: -33.4%;
@@ -245,16 +245,14 @@
   font-size: 0.85em;
   color: #878787;
   display: block;
-  font-weight: 700;
 }
 .locator .locator-controls .help {
-  font-size: 0.75em;
+  font-size: 0.65em;
   color: #878787;
-  margin-bottom: 0.8em;
+  margin-bottom: 0.5em;
 }
 .locator .locator-controls .config-option label {
   padding-left: 1.15em;
-  padding-bottom: 0.5em;
 }
 .locator .locator-controls input,
 .locator .locator-controls select,
@@ -266,6 +264,11 @@
   -moz-appearance: none;
   appearance: none;
   color: #343434;
+}
+.locator .locator-controls .coordinates {
+  float: left;
+  display: inline-block;
+  font-size: 1em;
 }
 .locator .locator-controls button {
   border: none;
@@ -396,14 +399,13 @@
   background-repeat: no-repeat;
   background-position: center center;
 }
-/*.locator .locator-controls .image-picker .image-picker-item.inactive {
+.locator .locator-controls .image-picker .image-picker-item.inactive {
   -moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
   -o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
   -webkit-filter: grayscale(100%);
   filter: gray;
   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
 }
-*/
 .locator .locator-controls .image-picker .image-picker-item.active {
   outline: 1px solid #343434;
   border: 5px solid #F1F1F1;
@@ -482,7 +484,7 @@
   width: 0.7em;
   height: 0.7em;
 }
-/*.locator .locator-controls .markers .color-picker .color-picker-item.inactive {
+.locator .locator-controls .markers .color-picker .color-picker-item.inactive {
   -moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
   -o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
   -webkit-filter: grayscale(100%);
@@ -494,7 +496,7 @@
   -o-filter: none;
   -webkit-filter: grayscale(0);
   filter: none;
-}*/
+}
 .locator .locator-controls .drawing {
   margin-bottom: 1em;
 }
@@ -517,7 +519,6 @@
 .locator .locator-controls .drawing .drawing-section .color-picker {
   max-width: 60%;
 }
-/*
 .locator .locator-controls .drawing .drawing-section .color-picker-item.inactive {
   -moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
   -o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
@@ -530,7 +531,7 @@
   -o-filter: none;
   -webkit-filter: grayscale(0);
   filter: none;
-}*/
+}
 .locator .locator-controls .config-button {
   padding: 0 1em;
 }
