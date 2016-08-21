@@ -60,12 +60,14 @@
         {{/options.geocoder}}
 
         <!-- {{^options.geocoder}} -->
+        {{^options.geocoder}}
           <div class="config-option">
             <label>Latitude and longitude location</label>
 
             <br><input class="coordinates" type="number" placeholder="Latitude" value="{{ options.lat }}" lazy>
             <br><input class="coordinates" type="number" placeholder="Longitude" value="{{ options.lng }}" lazy>
           </div>
+          {{/options.geocoder}}
           <!-- {{/options.geocoder}} -->
 
         <div class="markers {{^options.markers}}no-markers{{/}}">
