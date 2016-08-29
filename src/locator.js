@@ -469,7 +469,7 @@ _.extend(Locator.prototype, {
     width / this.options.ratios[this.options.ratio] :
     _.isNumber(this.options.ratio) ? width / this.options.ratio :
     mapEl.getBoundingClientRect().height;
-
+    
     mapEl.style.width = width + "px";
     mapEl.style.height = height + "px";
 
