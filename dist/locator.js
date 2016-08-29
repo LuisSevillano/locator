@@ -2925,8 +2925,8 @@ _html2canvas.Renderer.Canvas = function(options) {
       zoom: 15,
       minZoom: 1,
       maxZoom: 18,
-      lat: 40.4111255,
-      lng: -3.7092157,
+      lat: 40.4170341,
+      lng: -3.7035037,
 
       // Attribution (or source) that goes on top of map
       embedAttribution: true,
