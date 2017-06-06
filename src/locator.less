@@ -1,6 +1,6 @@
 /**
- * Main CSS for Locator.
- */
+* Main CSS for Locator.
+*/
 
 // Variables
 @black: #000000;
@@ -53,10 +53,10 @@
   }
 
   .not-grayscale {
-     -moz-filter: none;
-     -o-filter: none;
-     -webkit-filter: grayscale(0);
-     filter: none;
+    -moz-filter: none;
+    -o-filter: none;
+    -webkit-filter: grayscale(0);
+    filter: none;
   }
 
   // Main interactive map display (preview)
@@ -97,9 +97,9 @@
   }
 
   .leaflet-control-minimap {
-  	border: 0;
-  	box-shadow: none;
-  	border-radius: 0;
+    border: 0;
+    box-shadow: none;
+    border-radius: 0;
   }
 
   .locator-map-attribution {
@@ -494,11 +494,14 @@
       }
     }
 
-    .color-picker {
+
+    .color-picker,
+    .font-picker {
       line-height: 1em;
       vertical-align: top;
 
-      .color-picker-item {
+      .color-picker-item,
+      .font-picker-item {
         display: inline-block;
         border: 1px solid @white;
         outline: 1px solid @white;
@@ -517,7 +520,12 @@
           outline: 1px solid @dark-grey;
         }
       }
+      .font-picker-item {
+        width: 1.2em;
+        height: 1.2em;
+      }
     }
+
 
     .markers {
       .add-marker {
@@ -562,7 +570,26 @@
       button {
         display: inline-block;
       }
+      .marker-actions {
+        div {
+          margin-bottom: 0.15em;
+        }
 
+        .picker {
+          display: inline-block;
+          margin-right: 1em;          
+        }
+        .marker-action {
+          .markers-label {
+            display: inline-block;
+          }
+        }
+        .destructive {
+          float: right;
+        }
+
+      }
+      .font-picker,
       .color-picker {
         display: inline-block;
         max-width: 4.25em;
@@ -608,7 +635,7 @@
         }
 
         .color-picker-item.inactive {
-        //  .grayscale;
+          //  .grayscale;
         }
 
         &:hover .color-picker-item {

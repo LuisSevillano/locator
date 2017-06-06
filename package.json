@@ -5,7 +5,8 @@
   "main": "dist/locator.js",
   "dependencies": {},
   "devDependencies": {
-    "gulp": "^3.9.0",
+    "bower": "^1.8.0",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.6.0",
     "gulp-header": "^1.7.1",

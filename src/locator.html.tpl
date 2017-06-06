@@ -74,6 +74,7 @@
           <label class="no-markers-label">Marcadores</label>
           <button class="add-marker action small inline" on-tap="add-marker" title="Añadir marcador al centro del mapa"><i class="fa fa-plus"></i></button>
 
+
           <label class="markers-label">Marcadores.</label>
           <div class="help">Utiliza <code>&lt;br&gt;</code> para hacer saltos de línea.</div>
 
@@ -85,35 +86,64 @@
 
               <div class="marker-actions">
                 {{#options.markerToCenter}}
+                <div class="marker-action">
                   <button class="action small" on-tap="marker-to-center:{{ mi }}" title="Mover el marcador al centro del mapa"><i class="fa fa-compass"></i></button>
+                  <label class="markers-label">Mover el marcador al centro del mapa</label>
+                  <button class="destructive small" on-tap="remove-marker:{{ mi }}" title="Eliminar marcador"><i class="fa fa-close"></i></button>
+                </div>
                 {{/}}
 
                 {{#options.centerToMarker}}
+                <div class="marker-action">
                   <button class="action small" on-tap="center-to-marker:{{ mi }}" title="Centrar el mapa al marcador"><i class="fa fa-plus-square-o"></i></button>
+                  <label class="markers-label">Centrar el mapa al marcador</label>
+                </div>
                 {{/}}
 
-                {{#(_.size(options.markerBackgrounds) > 1)}}
-                  <div class="color-picker" title="Establecer el color de fondo del marcador">
-                    {{#options.markerBackgrounds:bi}}
-                      <!-- <div class="color-picker-item {{#(options.markers[mi] && options.markers[mi].background === this)}}active{{ else }}inactive{{/()}} {{#(this.indexOf('255, 255, 255') !== -1 || this.indexOf('FFFFFF') !== -1)}}is-white{{/()}}" -->
+                <div class="pickers">
+                  {{#(_.size(options.markerBackgrounds) > 1)}}
+                  <div class="picker">
+                    <label class="markers-label">Color de fondo</label>
+                    <div class="color-picker" title="Establecer el color de fondo del marcador">
+                      {{#options.markerBackgrounds:bi}}
+                      <!--<div class="color-picker-item {{#(options.markers[mi] && options.markers[mi].background === this)}}active{{ else }}inactive{{/()}} {{#(this.indexOf('255, 255, 255') !== -1 || this.indexOf('FFFFFF') !== -1)}}is-white{{/()}}"-->
                       <div class="color-picker-item {{#(options.markers[mi] && options.markers[mi].background === this)}}active{{ else }}inactive{{/()}} {{#(this.indexOf('255, 255, 255') !== -1 || this.indexOf('FFFFFF') !== -1)}}is-white{{/()}}"
-                        style="background-color: {{ this }}"
-                        on-tap="setMarker:{{ mi }},'background',{{ this }}">
-                    {{/}}
-                  </div>
-                {{/}}
+                      style="background-color: {{ this }}"
+                      on-tap="setMarker:{{ mi }},'background',{{ this }}">
+                      {{/}}
+                    </div>
 
-                {{#(_.size(options.markerForegrounds) > 1)}}
-                  <div class="color-picker" title="Establecer el color del texto del marcador">
-                    {{#options.markerForegrounds:bi}}
+                  </div>
+                  {{/}}
+
+                  {{#(_.size(options.markerForegrounds) > 1)}}
+                  <div class="picker">
+                    <label class="markers-label">Color de fuente</label>
+                    <div class="color-picker" title="Establecer el color del texto del marcador">
+                      {{#options.markerForegrounds:bi}}
                       <div class="color-picker-item {{#(options.markers[mi] && options.markers[mi].foreground === this)}}active{{ else }}inactive{{/()}} {{#(this.indexOf('255, 255, 255') !== -1 || this.indexOf('FFFFFF') !== -1)}}is-white{{/()}}"
-                        style="background-color: {{ this }}"
-                        on-tap="setMarker:{{ mi }},'foreground',{{ this }}">
-                    {{/}}
+                      style="background-color: {{ this }}"
+                      on-tap="setMarker:{{ mi }},'foreground',{{ this }}">
+                      {{/}}
                   </div>
-                {{/}}
 
-                <button class="destructive small" on-tap="remove-marker:{{ mi }}" title="Eliminar marcador"><i class="fa fa-close"></i></button>
+                  </div>
+                  {{/}}
+
+                  {{#(_.size(options.markerFontSize) > 1)}}
+                    <div class="picker">
+                      <label class="markers-label">Tamaño de fuente</label>
+                      <div class="font-picker" title="Tamaño de la fuente">
+                        {{#options.markerFontSize:bi}}
+                          <div class="font-picker-item {{#(options.markerFontSize[mi] && options.markerFontSize[mi].fontSize === this)}}active{{ else }}inactive{{/()}}"
+                            style="color: gray"
+                            on-tap="changeFontSize:{{ mi }},'foreground',{{ this }}">
+                            {{ this.fontSize }}
+                        {{/}}
+                      </div>
+                    </div>
+                  {{/}}
+                </div>
               </div>
             </div>
           {{/}}

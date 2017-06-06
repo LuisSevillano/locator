@@ -21,23 +21,23 @@
       tilesets: {
         "CartoDB Positron": {
           url: "http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
-          attribution: "<a target='_blank' href='http://www.elespanol.com'>El Español</a> - &copy; <a target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors, &copy; <a target=\"_blank\" href=\"http://cartodb.com/attributions\">CartoDB</a>"
+          attribution: "<a target='_blank' href='http://www.elindependiente.com'>El Independiente</a> - &copy; <a target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors, &copy; <a target=\"_blank\" href=\"http://cartodb.com/attributions\">CartoDB</a>"
         },
         "Stamen Toner": {
           url: "http://tile.stamen.com/toner/{z}/{x}/{y}.png",
-          attribution: "<a target='_blank' href='http://www.elespanol.com'>El Español</a> - Map tiles by <a target=\"_blank\" href=\"http://stamen.com\">Stamen Design</a>, under <a  target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\">CC BY 3.0</a>. Data by <a  target=\"_blank\" href=\"http://openstreetmap.org\">OpenStreetMap</a>, under <a target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\">ODbL</a>"
+          attribution: "<a target='_blank' href='http://www.elindependiente.com'>El Independiente</a> - Map tiles by <a target=\"_blank\" href=\"http://stamen.com\">Stamen Design</a>, under <a  target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\">CC BY 3.0</a>. Data by <a  target=\"_blank\" href=\"http://openstreetmap.org\">OpenStreetMap</a>, under <a target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\">ODbL</a>"
         },
         "Mapbox Streets (via WNYC)": {
           url: "https://api.mapbox.com/v4/jkeefe.np44bm6o/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamtlZWZlIiwiYSI6ImVCXzdvUGsifQ.5tFwEhRfLmH36EUxuvUQLA",
-          attribution: "<a target='_blank' href='http://www.elespanol.com'>El Español</a> - &copy; <a target='_blank' href='https://www.mapbox.com/about/maps/'>Mapbox</a> &copy; <a target='_blank' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
+          attribution: "<a target='_blank' href='http://www.elindependiente.com'>El Independiente</a> - &copy; <a target='_blank' href='https://www.mapbox.com/about/maps/'>Mapbox</a> &copy; <a target='_blank' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
         },
         "Mapbox Satellite (via WNYC)": {
           url: "https://api.mapbox.com/v4/jkeefe.oee0fah0/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamtlZWZlIiwiYSI6ImVCXzdvUGsifQ.5tFwEhRfLmH36EUxuvUQLA",
-          attribution: "<a target='_blank' href='http://www.elespanol.com'>El Español</a> - &copy; <a target='_blank' href='https://www.mapbox.com/about/maps/'>Mapbox</a> &copy; <a target='_blank' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>; &copy; <a target='_blank' href='https://www.digitalglobe.com/'>DigitalGlobe</a>"
+          attribution: "<a target='_blank' href='http://www.elindependiente.com'>El Independiente</a> - &copy; <a target='_blank' href='https://www.mapbox.com/about/maps/'>Mapbox</a> &copy; <a target='_blank' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>; &copy; <a target='_blank' href='https://www.digitalglobe.com/'>DigitalGlobe</a>"
         },
         "Mapbox Run, Bike, Hike (via WNYC)": {
           url: "https://api.mapbox.com/v4/jkeefe.oee1c53c/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamtlZWZlIiwiYSI6ImVCXzdvUGsifQ.5tFwEhRfLmH36EUxuvUQLA",
-          attribution: "<a target='_blank' href='http://www.elespanol.com'>El Español</a> - &copy; <a target='_blank' href='https://www.mapbox.com/about/maps/'>Mapbox</a> &copy; <a target='_blank' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
+          attribution: "<a target='_blank' href='http://www.elindependiente.com'>El Independiente</a> - &copy; <a target='_blank' href='https://www.mapbox.com/about/maps/'>Mapbox</a> &copy; <a target='_blank' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
         },
 
         // Example of just url
@@ -61,7 +61,7 @@
       miniExtentStyles: {
         fill: false,
         stroke: true,
-        color: "#000000",
+        color: "rgba(30, 30, 30, 0.9)",
         opacity: 0.9,
         weight: 1.5
       },
@@ -69,7 +69,7 @@
         backgroundColor: "#FFFFFF",
         padding: 3,
         shadow: true,
-        shadowColor: "rgba(0, 0, 0, 0.65)",
+        shadowColor: "rgba(30, 30, 30, 0.9)",
         shadowBlur: 5,
         shadowOffsetX: 1,
         shadowOffsetY: 1
@@ -82,37 +82,55 @@
         lng: -3.7035037
       }],
 
+      // font sizes
+      markerFontSize: [
+        {"fontSize": 14},
+        {"fontSize": 24},
+        {"fontSize": 34}
+      ],
+
       // Marker defaults
       markerDefaults: {
         text: "",
-        background: "rgba(0, 0, 0, 0.9)",
+        background: "rgba(30, 30, 30, 0.9)",
         foreground: "rgba(255, 255, 255, 0.9)",
         radius: 5,
-        fontSize: 33,
+        fontSize: 24,
         font: "\"Roboto\", Helvetica Neue, Helvetica, Arial, sans-serif",
 
-        labelDistance: 20,
+        labelDistance: 15,
         labelWidth: 3,
-        padding: 10
+        padding: 8
       },
 
       // Marker option sets
       markerBackgrounds: [
-        "rgba(255, 74, 27,0.9)",
-        "rgba(205, 23, 25,0.9)",
-        "rgba(168, 48, 36,0.9)",
-        "rgba(240, 140, 0,0.9)",
-        "rgba(255, 192, 27,0.9)",
-        "rgba(240, 60, 134,0.9)",
-        "rgba(162, 13, 115,0.9)",
-        "rgba(24, 188, 204,0.9)",
-        "rgba(4, 117, 128,0.9)",
-        "rgba(141, 187, 34,0.9)",
-        "rgba(62, 121, 42,0.9)"
+        "rgba(30, 30, 30,0.9)",
+        "rgba(255, 255, 255, 0.9)",
+        "rgba(0, 129, 146,0.9)",
+        "rgba(146,17,0,0.9)",
+        "rgba(129, 146,0,0.9)",
+        "rgba(255,187,0,0.9)",
+        "rgba(91,116,119,0.9)",
+        "rgba(73,0,64,0.9)",
+        "rgba(153,194,199,0.9)",
+        "rgba(204,69,22,0.9)",
+        "rgba(77,87,0,0.9)",
+        "rgba(147, 0, 130,0.9)"
       ],
       markerForegrounds: [
         "rgba(30, 30, 30,0.9)",
-        "rgba(255, 255, 255, 0.9)"
+        "rgba(255, 255, 255, 0.9)",
+        "rgba(0, 129, 146,0.9)",
+        "rgba(146,17,0,0.9)",
+        "rgba(129, 146,0,0.9)",
+        "rgba(255,187,0,0.9)",
+        "rgba(91,116,119,0.9)",
+        "rgba(73,0,64,0.9)",
+        "rgba(153,194,199,0.9)",
+        "rgba(204,69,22,0.9)",
+        "rgba(77,87,0,0.9)",
+        "rgba(147, 0, 130,0.9)"
       ],
 
       // Draggable marker.  For URI, See src/images and generated at
@@ -136,37 +154,40 @@
       },
       geojson: false,
       drawingStrokes: [
-        "rgba(255, 74, 27,0.9)",
-        "rgba(205, 23, 25,0.9)",
-        "rgba(168, 48, 36,0.9)",
-        "rgba(240, 140, 0,0.9)",
-        "rgba(255, 192, 27,0.9)",
-        "rgba(240, 60, 134,0.9)",
-        "rgba(162, 13, 115,0.9)",
-        "rgba(24, 188, 204,0.9)",
-        "rgba(4, 117, 128,0.9)",
-        "rgba(141, 187, 34,0.9)",
-        "rgba(62, 121, 42,0.9)"
+        "rgba(30, 30, 30,0.9)",
+        "rgba(255, 255, 255, 0.9)",
+        "rgba(0, 129, 146,0.9)",
+        "rgba(146,17,0,0.9)",
+        "rgba(129, 146,0,0.9)",
+        "rgba(255,187,0,0.9)",
+        "rgba(91,116,119,0.9)",
+        "rgba(73,0,64,0.9)",
+        "rgba(153,194,199,0.9)",
+        "rgba(204,69,22,0.9)",
+        "rgba(77,87,0,0.9)",
+        "rgba(147, 0, 130,0.9)"
+
       ],
       drawingFills: [
-        "rgba(255, 74, 27,0.9)",
-        "rgba(205, 23, 25,0.9)",
-        "rgba(168, 48, 36,0.9)",
-        "rgba(240, 140, 0,0.9)",
-        "rgba(255, 192, 27,0.9)",
-        "rgba(240, 60, 134,0.9)",
-        "rgba(162, 13, 115,0.9)",
-        "rgba(24, 188, 204,0.9)",
-        "rgba(4, 117, 128,0.9)",
-        "rgba(141, 187, 34,0.9)",
-        "rgba(62, 121, 42,0.9)"
+        "rgba(30, 30, 30,0.9)",
+        "rgba(255, 255, 255, 0.9)",
+        "rgba(0, 129, 146,0.9)",
+        "rgba(146,17,0,0.9)",
+        "rgba(129, 146,0,0.9)",
+        "rgba(255,187,0,0.9)",
+        "rgba(91,116,119,0.9)",
+        "rgba(73,0,64,0.9)",
+        "rgba(153,194,199,0.9)",
+        "rgba(204,69,22,0.9)",
+        "rgba(77,87,0,0.9)",
+        "rgba(147, 0, 130,0.9)"
       ],
 
       // Dimensions
       widths: {
         Small: 400,
         Medium: 600,
-        Large: 1706,
+        Large: 1440,
       },
       //width: "Medium",
       width: "Large",
@@ -175,7 +196,7 @@
         "4:3": 4 / 3,
         "16:9": 16 / 9
       },
-      ratio: "4:3",
+      ratio: "16:9",
 
       // Interface
       controlsOpen: true,
@@ -328,6 +349,14 @@ _.extend(Locator.prototype, {
       }
     }, this));
 
+    // Update marker font-size
+    this.interface.on("setFontSize", _.bind(function(e, fontIndex, property, value) {
+      var fontSize = this.get("options.markerFontSize." + fontIndex);
+      if (fontSize) {
+        this.set("options.markerFontSize." + fontIndex + "." + property, value);
+      }
+    }, this));
+
     // Update drawing styles
     this.interface.on("setDrawing", _.bind(function(e, property, value) {
       this.set("options.drawingStyles." + property, value);
@@ -469,7 +498,7 @@ _.extend(Locator.prototype, {
     width / this.options.ratios[this.options.ratio] :
     _.isNumber(this.options.ratio) ? width / this.options.ratio :
     mapEl.getBoundingClientRect().height;
-    
+
     mapEl.style.width = width + "px";
     mapEl.style.height = height + "px";
 
